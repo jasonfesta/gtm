@@ -5,7 +5,7 @@ GTM runs locally in Codex with Python 3.12 or later. Connect only the services n
 ## 1. Install
 
 ```sh
-git clone https://github.com/darwin-studios/gtm.git
+git clone https://github.com/jasonfesta/gtm.git
 cd gtm
 python3.12 -m venv .venv
 source .venv/bin/activate
