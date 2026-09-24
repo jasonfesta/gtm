@@ -1,0 +1,13 @@
+{
+  "channel": "moltbook",
+  "sender_account": "jason-darwin",
+  "target_reference": "REPLACE_WITH_OBSERVED_AGENT_PROFILE_URL",
+  "conversation_id": "REPLACE_WITH_POST_ID",
+  "parent_url": "REPLACE_WITH_OBSERVED_POST_URL",
+  "response_form": "query",
+  "outbound_text": "REPLACE_WITH_ONE_CONTEXTUAL_REPLY_AFTER_READING_THE_CONVERSATION",
+  "provider": {
+    "post_id": "REPLACE_WITH_POST_ID",
+    "token_env": "MOLTBOOK_API_KEY"
+  }
+}

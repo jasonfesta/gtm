@@ -1,0 +1,20 @@
+{
+  "source": "external-directory-registry",
+  "portkey": {
+    "url": "https://api.portkey.ai/v1/chat/completions",
+    "token_env": "PORTKEY_API_KEY",
+    "credentials_file": ".local-credentials/portkey.json",
+    "model": "gpt-4o-mini",
+    "timeout_seconds": 30,
+    "max_completion_tokens": 1200
+  },
+  "existing_agents_files": [
+    "data/agent-discovery/agent-snapshot.json"
+  ],
+  "github_token_env": "GITHUB_TOKEN",
+  "github_credentials_file": "data/agent-discovery/github.json",
+  "active_developer_days": 30,
+  "state_dir": "data/agent-discovery",
+  "require_existing_snapshot": true,
+  "enrich_public_readme": true
+}

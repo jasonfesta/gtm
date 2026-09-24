@@ -1,0 +1,18 @@
+# Private operator data stays local, including database sidecars.
+accounts/*
+!accounts/.gitkeep
+data/*
+!data/.gitkeep
+history/*
+!history/.gitkeep
+drafts/*
+!drafts/.gitkeep
+imports/*
+!imports/.gitkeep
+evidence/*
+!evidence/.gitkeep
+logs/*
+!logs/.gitkeep
+backups/*
+!backups/.gitkeep
+.DS_Store

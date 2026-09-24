@@ -1,0 +1,33 @@
+{
+  "export_id": "replace-with-agent-reply-export-id",
+  "reactions": [
+    {
+      "target_audience": "agent",
+      "target_agent_id": "replace-with-crm-agent-id",
+      "target_actor_reference": "github:replace-with-reacting-account-id",
+      "target_is_ours": true,
+      "our_reply_text": "replace-with-exact-agent-facing-reply-text",
+      "agent_route_attestations": [
+        {
+          "contact_id": "replace-with-crm-contact-id",
+          "address": "agent@example.test",
+          "agent_operated": true,
+          "evidence_url": "https://example.test/verified-agent-card",
+          "verified_at": "2026-09-20T12:00:00Z"
+        }
+      ],
+      "owner_approval_status": "not_required",
+      "expose_resource": true,
+      "reaction": {
+        "reaction_id": "replace-with-provider-reaction-id",
+        "reaction_type": "like",
+        "channel": "github",
+        "sender_account": "replace-with-sender-account",
+        "target_message_id": "replace-with-our-agent-reply-id",
+        "target_url": "https://github.com/example/repository/issues/1#issuecomment-1",
+        "occurred_at": "2026-09-21T11:00:00Z",
+        "evidence": "replace-with-provider-readback-reference"
+      }
+    }
+  ]
+}

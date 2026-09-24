@@ -1,0 +1,1094 @@
+{
+  "version": "agentic-search-v3",
+  "channels": [
+    "x",
+    "linkedin"
+  ],
+  "entries": [
+    {
+      "id": "A01",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agentic",
+      "linkedin": "agentic"
+    },
+    {
+      "id": "A02",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "AI agent",
+      "linkedin": "AI agent"
+    },
+    {
+      "id": "A03",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "AI agents",
+      "linkedin": "AI agents"
+    },
+    {
+      "id": "A04",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agent developer",
+      "linkedin": "agent developer"
+    },
+    {
+      "id": "A05",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agent builder",
+      "linkedin": "agent builder"
+    },
+    {
+      "id": "A06",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "building agents",
+      "linkedin": "building agents"
+    },
+    {
+      "id": "A07",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "multi-agent",
+      "linkedin": "multi-agent"
+    },
+    {
+      "id": "A08",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agent framework",
+      "linkedin": "agent framework"
+    },
+    {
+      "id": "A09",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agent orchestration",
+      "linkedin": "agent orchestration"
+    },
+    {
+      "id": "A10",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agent workflow",
+      "linkedin": "agent workflow"
+    },
+    {
+      "id": "A11",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agentic developer",
+      "linkedin": "agentic developer"
+    },
+    {
+      "id": "A12",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agentic dev",
+      "linkedin": "agentic dev"
+    },
+    {
+      "id": "A13",
+      "family": "A",
+      "topic": "Agent development",
+      "x": "agentic engineer",
+      "linkedin": "agentic engineer"
+    },
+    {
+      "id": "B01",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "AI assistant",
+      "linkedin": "AI assistant"
+    },
+    {
+      "id": "B02",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "assistant developer",
+      "linkedin": "assistant developer"
+    },
+    {
+      "id": "B03",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "assistant dev",
+      "linkedin": "assistant dev"
+    },
+    {
+      "id": "B04",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "assistant engineer",
+      "linkedin": "assistant engineer"
+    },
+    {
+      "id": "B05",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "assistant builder",
+      "linkedin": "assistant builder"
+    },
+    {
+      "id": "B06",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "assistant SDK",
+      "linkedin": "assistant SDK"
+    },
+    {
+      "id": "B07",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "building an assistant",
+      "linkedin": "building an assistant"
+    },
+    {
+      "id": "B08",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "personal AI assistant",
+      "linkedin": "personal AI assistant"
+    },
+    {
+      "id": "B09",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "coding assistant",
+      "linkedin": "coding assistant"
+    },
+    {
+      "id": "B10",
+      "family": "B",
+      "topic": "Assistant development",
+      "x": "AI copilot",
+      "linkedin": "AI copilot"
+    },
+    {
+      "id": "C01",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "open source agent",
+      "linkedin": "open source agent"
+    },
+    {
+      "id": "C02",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "open-source agent",
+      "linkedin": "open-source agent"
+    },
+    {
+      "id": "C03",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "open source assistant",
+      "linkedin": "open source assistant"
+    },
+    {
+      "id": "C04",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "open-source assistant",
+      "linkedin": "open-source assistant"
+    },
+    {
+      "id": "C05",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "open source MCP",
+      "linkedin": "open source MCP"
+    },
+    {
+      "id": "C06",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "agent SDK",
+      "linkedin": "agent SDK"
+    },
+    {
+      "id": "C07",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "agent maintainer",
+      "linkedin": "agent maintainer"
+    },
+    {
+      "id": "C08",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "agent contribution",
+      "linkedin": "agent contribution"
+    },
+    {
+      "id": "C09",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "agent repository",
+      "linkedin": "agent repository"
+    },
+    {
+      "id": "C10",
+      "family": "C",
+      "topic": "Open-source software",
+      "x": "self-hosted agent",
+      "linkedin": "self-hosted agent"
+    },
+    {
+      "id": "D01",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "tool discovery",
+      "linkedin": "tool discovery"
+    },
+    {
+      "id": "D02",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "AI discovery",
+      "linkedin": "AI discovery"
+    },
+    {
+      "id": "D03",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "agent discovery",
+      "linkedin": "agent discovery"
+    },
+    {
+      "id": "D04",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "agent search",
+      "linkedin": "agent search"
+    },
+    {
+      "id": "D05",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "AI search",
+      "linkedin": "AI search"
+    },
+    {
+      "id": "D06",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "tool search",
+      "linkedin": "tool search"
+    },
+    {
+      "id": "D07",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "agent directory",
+      "linkedin": "agent directory"
+    },
+    {
+      "id": "D08",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "agent marketplace",
+      "linkedin": "agent marketplace"
+    },
+    {
+      "id": "D09",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "agentic RAG",
+      "linkedin": "agentic RAG"
+    },
+    {
+      "id": "D10",
+      "family": "D",
+      "topic": "Discovery and retrieval",
+      "x": "semantic search",
+      "linkedin": "semantic search"
+    },
+    {
+      "id": "E01",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "MCP server",
+      "linkedin": "MCP server"
+    },
+    {
+      "id": "E02",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "Model Context Protocol",
+      "linkedin": "Model Context Protocol"
+    },
+    {
+      "id": "E03",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "tool calling",
+      "linkedin": "tool calling"
+    },
+    {
+      "id": "E04",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "function calling",
+      "linkedin": "function calling"
+    },
+    {
+      "id": "E05",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "agent infrastructure",
+      "linkedin": "agent infrastructure"
+    },
+    {
+      "id": "E06",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "agent evals",
+      "linkedin": "agent evals"
+    },
+    {
+      "id": "E07",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "agent benchmarks",
+      "linkedin": "agent benchmarks"
+    },
+    {
+      "id": "E08",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "agent permissions",
+      "linkedin": "agent permissions"
+    },
+    {
+      "id": "E09",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "agent memory",
+      "linkedin": "agent memory"
+    },
+    {
+      "id": "E10",
+      "family": "E",
+      "topic": "Tools, trust and evaluation",
+      "x": "agent guardrails",
+      "linkedin": "agent guardrails"
+    },
+    {
+      "id": "F01",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agentic payments",
+      "linkedin": "agentic payments"
+    },
+    {
+      "id": "F02",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agent payments",
+      "linkedin": "agent payments"
+    },
+    {
+      "id": "F03",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agentic commerce",
+      "linkedin": "agentic commerce"
+    },
+    {
+      "id": "F04",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "machine-to-machine payments",
+      "linkedin": "machine-to-machine payments"
+    },
+    {
+      "id": "F05",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "x402",
+      "linkedin": "x402"
+    },
+    {
+      "id": "F06",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agent checkout",
+      "linkedin": "agent checkout"
+    },
+    {
+      "id": "F07",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agent transaction",
+      "linkedin": "agent transaction"
+    },
+    {
+      "id": "F08",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agent billing",
+      "linkedin": "agent billing"
+    },
+    {
+      "id": "F09",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agent payment authorization",
+      "linkedin": "agent payment authorization"
+    },
+    {
+      "id": "F10",
+      "family": "F",
+      "topic": "Agent commerce",
+      "x": "agent spending limits",
+      "linkedin": "agent spending limits"
+    },
+    {
+      "id": "G01",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw",
+      "linkedin": "OpenClaw"
+    },
+    {
+      "id": "G02",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "ClawHub",
+      "linkedin": "ClawHub"
+    },
+    {
+      "id": "G03",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw skill",
+      "linkedin": "OpenClaw skill"
+    },
+    {
+      "id": "G04",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw plugin",
+      "linkedin": "OpenClaw plugin"
+    },
+    {
+      "id": "G05",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw automation",
+      "linkedin": "OpenClaw automation"
+    },
+    {
+      "id": "G06",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw deployment",
+      "linkedin": "OpenClaw deployment"
+    },
+    {
+      "id": "G07",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw Docker",
+      "linkedin": "OpenClaw Docker"
+    },
+    {
+      "id": "G08",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw Ollama",
+      "linkedin": "OpenClaw Ollama"
+    },
+    {
+      "id": "G09",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw Telegram",
+      "linkedin": "OpenClaw Telegram"
+    },
+    {
+      "id": "G10",
+      "family": "G",
+      "topic": "OpenClaw ecosystem",
+      "x": "OpenClaw WhatsApp",
+      "linkedin": "OpenClaw WhatsApp"
+    },
+    {
+      "id": "H01",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "AI developer",
+      "linkedin": "AI developer"
+    },
+    {
+      "id": "H02",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "AI dev",
+      "linkedin": "AI dev"
+    },
+    {
+      "id": "H03",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "AI engineer",
+      "linkedin": "AI engineer"
+    },
+    {
+      "id": "H04",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "AI builder",
+      "linkedin": "AI builder"
+    },
+    {
+      "id": "H05",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "LLM developer",
+      "linkedin": "LLM developer"
+    },
+    {
+      "id": "H06",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "LLM engineer",
+      "linkedin": "LLM engineer"
+    },
+    {
+      "id": "H07",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "LLM app",
+      "linkedin": "LLM app"
+    },
+    {
+      "id": "H08",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "LLM application",
+      "linkedin": "LLM application"
+    },
+    {
+      "id": "H09",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "applied AI",
+      "linkedin": "applied AI"
+    },
+    {
+      "id": "H10",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "building with AI",
+      "linkedin": "building with AI"
+    },
+    {
+      "id": "H11",
+      "family": "H",
+      "topic": "AI developers and applications",
+      "x": "generative AI developer",
+      "linkedin": "generative AI developer"
+    },
+    {
+      "id": "I01",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes Agent",
+      "linkedin": "Hermes Agent"
+    },
+    {
+      "id": "I02",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Nous Research",
+      "linkedin": "Nous Research"
+    },
+    {
+      "id": "I03",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes Atlas",
+      "linkedin": "Hermes Atlas"
+    },
+    {
+      "id": "I04",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes skill",
+      "linkedin": "Hermes skill"
+    },
+    {
+      "id": "I05",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes MCP",
+      "linkedin": "Hermes MCP"
+    },
+    {
+      "id": "I06",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes Studio",
+      "linkedin": "Hermes Studio"
+    },
+    {
+      "id": "I07",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Oh My Hermes",
+      "linkedin": "Oh My Hermes"
+    },
+    {
+      "id": "I08",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes deployment",
+      "linkedin": "Hermes deployment"
+    },
+    {
+      "id": "I09",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes memory",
+      "linkedin": "Hermes memory"
+    },
+    {
+      "id": "I10",
+      "family": "I",
+      "topic": "Hermes ecosystem",
+      "x": "Hermes multi-agent",
+      "linkedin": "Hermes multi-agent"
+    },
+    {
+      "id": "J01",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Vercel AI SDK",
+      "linkedin": "Vercel AI SDK"
+    },
+    {
+      "id": "J02",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "OpenAI Agents SDK",
+      "linkedin": "OpenAI Agents SDK"
+    },
+    {
+      "id": "J03",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Cloudflare Agents",
+      "linkedin": "Cloudflare Agents"
+    },
+    {
+      "id": "J04",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "LangGraph",
+      "linkedin": "LangGraph"
+    },
+    {
+      "id": "J05",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "LangSmith",
+      "linkedin": "LangSmith"
+    },
+    {
+      "id": "J06",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Google ADK",
+      "linkedin": "Google ADK"
+    },
+    {
+      "id": "J07",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Microsoft Agent Framework",
+      "linkedin": "Microsoft Agent Framework"
+    },
+    {
+      "id": "J08",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Mastra",
+      "linkedin": "Mastra"
+    },
+    {
+      "id": "J09",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Pydantic AI",
+      "linkedin": "Pydantic AI"
+    },
+    {
+      "id": "J10",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "CrewAI",
+      "linkedin": "CrewAI"
+    },
+    {
+      "id": "J11",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "LlamaIndex",
+      "linkedin": "LlamaIndex"
+    },
+    {
+      "id": "J12",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Agno",
+      "linkedin": "Agno"
+    },
+    {
+      "id": "J13",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "AutoGen",
+      "linkedin": "AutoGen"
+    },
+    {
+      "id": "J14",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Strands Agents",
+      "linkedin": "Strands Agents"
+    },
+    {
+      "id": "J15",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Lindy",
+      "linkedin": "Lindy"
+    },
+    {
+      "id": "J16",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Relevance AI",
+      "linkedin": "Relevance AI"
+    },
+    {
+      "id": "J17",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "n8n AI",
+      "linkedin": "n8n AI"
+    },
+    {
+      "id": "J18",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Zapier Agents",
+      "linkedin": "Zapier Agents"
+    },
+    {
+      "id": "J19",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Dify",
+      "linkedin": "Dify"
+    },
+    {
+      "id": "J20",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Flowise",
+      "linkedin": "Flowise"
+    },
+    {
+      "id": "J21",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Wordware",
+      "linkedin": "Wordware"
+    },
+    {
+      "id": "J22",
+      "family": "J",
+      "topic": "Frameworks and orchestration",
+      "x": "Botpress",
+      "linkedin": "Botpress"
+    },
+    {
+      "id": "K01",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "voice agent",
+      "linkedin": "voice agent"
+    },
+    {
+      "id": "K02",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "voice assistant",
+      "linkedin": "voice assistant"
+    },
+    {
+      "id": "K03",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "conversational AI",
+      "linkedin": "conversational AI"
+    },
+    {
+      "id": "K04",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "realtime agent",
+      "linkedin": "realtime agent"
+    },
+    {
+      "id": "K05",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "multimodal agent",
+      "linkedin": "multimodal agent"
+    },
+    {
+      "id": "K06",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "LiveKit Agents",
+      "linkedin": "LiveKit Agents"
+    },
+    {
+      "id": "K07",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Pipecat",
+      "linkedin": "Pipecat"
+    },
+    {
+      "id": "K08",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Vapi",
+      "linkedin": "Vapi"
+    },
+    {
+      "id": "K09",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Retell AI",
+      "linkedin": "Retell AI"
+    },
+    {
+      "id": "K10",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "ElevenLabs Agents",
+      "linkedin": "ElevenLabs Agents"
+    },
+    {
+      "id": "K11",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Linq iMessage",
+      "linkedin": "Linq iMessage"
+    },
+    {
+      "id": "K12",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Sendblue",
+      "linkedin": "Sendblue"
+    },
+    {
+      "id": "K13",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Bland AI",
+      "linkedin": "Bland AI"
+    },
+    {
+      "id": "K14",
+      "family": "K",
+      "topic": "Voice and messaging",
+      "x": "Twilio AI",
+      "linkedin": "Twilio AI"
+    },
+    {
+      "id": "L01",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "browser agent",
+      "linkedin": "browser agent"
+    },
+    {
+      "id": "L02",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent sandbox",
+      "linkedin": "agent sandbox"
+    },
+    {
+      "id": "L03",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "coding agent",
+      "linkedin": "coding agent"
+    },
+    {
+      "id": "L04",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "durable agent",
+      "linkedin": "durable agent"
+    },
+    {
+      "id": "L05",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent incident response",
+      "linkedin": "agent incident response"
+    },
+    {
+      "id": "L06",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent lead research",
+      "linkedin": "agent lead research"
+    },
+    {
+      "id": "L07",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent CRM integration",
+      "linkedin": "agent CRM integration"
+    },
+    {
+      "id": "L08",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent calendar integration",
+      "linkedin": "agent calendar integration"
+    },
+    {
+      "id": "L09",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent workflow automation",
+      "linkedin": "agent workflow automation"
+    },
+    {
+      "id": "L10",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "agent human approval",
+      "linkedin": "agent human approval"
+    },
+    {
+      "id": "L11",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Composio",
+      "linkedin": "Composio"
+    },
+    {
+      "id": "L12",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Arcade MCP",
+      "linkedin": "Arcade MCP"
+    },
+    {
+      "id": "L13",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Smithery",
+      "linkedin": "Smithery"
+    },
+    {
+      "id": "L14",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "MCP.so",
+      "linkedin": "MCP.so"
+    },
+    {
+      "id": "L15",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Glama MCP",
+      "linkedin": "Glama MCP"
+    },
+    {
+      "id": "L16",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Pipedream Connect",
+      "linkedin": "Pipedream Connect"
+    },
+    {
+      "id": "L17",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Nango OAuth",
+      "linkedin": "Nango OAuth"
+    },
+    {
+      "id": "L18",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Merge API",
+      "linkedin": "Merge API"
+    },
+    {
+      "id": "L19",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Browserbase",
+      "linkedin": "Browserbase"
+    },
+    {
+      "id": "L20",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Stagehand",
+      "linkedin": "Stagehand"
+    },
+    {
+      "id": "L21",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "E2B sandbox",
+      "linkedin": "E2B sandbox"
+    },
+    {
+      "id": "L22",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Daytona",
+      "linkedin": "Daytona"
+    },
+    {
+      "id": "L23",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Steel browser",
+      "linkedin": "Steel browser"
+    },
+    {
+      "id": "L24",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Browser Use",
+      "linkedin": "Browser Use"
+    },
+    {
+      "id": "L25",
+      "family": "L",
+      "topic": "Execution and workflows",
+      "x": "Modal sandbox",
+      "linkedin": "Modal sandbox"
+    }
+  ]
+}

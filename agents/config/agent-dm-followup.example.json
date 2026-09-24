@@ -1,0 +1,33 @@
+{
+  "export_id": "replace-with-manual-inbox-review-id",
+  "candidates": [
+    {
+      "kind": "follow_up",
+      "target_audience": "agent",
+      "target_agent_id": "replace-with-crm-agent-id",
+      "sender_account": "sender@example.test",
+      "agent_route_attestations": [
+        {
+          "contact_id": "replace-with-crm-contact-id",
+          "address": "agent@example.test",
+          "agent_operated": true,
+          "evidence_url": "https://example.test/verified-agent-card",
+          "verified_at": "2026-09-20T12:00:00Z"
+        }
+      ],
+      "source": {
+        "source_id": "<replace-with-inbound-message-id>",
+        "source_url": "https://api.agentmail.to/v0/inboxes/sender%40example.test/messages/%3Creplace-with-inbound-message-id%3E",
+        "occurred_at": "2026-09-21T13:00:00Z",
+        "evidence": "replace-with-exact-AgentMail-readback-reference"
+      },
+      "inbound": {
+        "message_id": "<replace-with-inbound-message-id>",
+        "thread_id": "replace-with-AgentMail-thread-id",
+        "from": "agent@example.test",
+        "text": "replace with the exact inbound AgentMail text"
+      },
+      "expose_resource": false
+    }
+  ]
+}

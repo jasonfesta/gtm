@@ -1,0 +1,405 @@
+{
+  "dashboard_id": 2118597,
+  "project_id": 121185,
+  "date_from": "-30d",
+  "exclude_ops": true,
+  "insights": [
+    {
+      "insight_id": 12098714,
+      "name": "Human Discovery \u00b7 people observed",
+      "description": "People observed across runs; may overlap. Not net-new CRM people.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT sumIf(people_count,NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('human discovery agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12098715,
+      "name": "Agent Discovery \u00b7 agents qualified",
+      "description": "Qualified agent observations across runs; infrastructure excluded. Not unique CRM additions.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT sumIf(agent_count,NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('agent discovery agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12098716,
+      "name": "Human Reply \u00b7 public sends",
+      "description": "Captured sends attributed to Human Reply. Missing events are not proof of inactivity.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT countIf(event_name='gtm.message_sent' AND NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('human reply agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12098717,
+      "name": "Agent Reply \u00b7 replies received",
+      "description": "Observed technical responses. A response is not product usage or conversion.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT countIf(event_name='gtm.agent_conversation_reply_received' AND NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('agent reply agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12106373,
+      "name": "Human DM \u00b7 captured sends",
+      "description": "Captured sends attributed to Human DM. Unspecified CRM history is not counted as a DM.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT countIf(event_name='gtm.message_sent' AND NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('human dm agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12108426,
+      "name": "Agent Chat / DM \u00b7 captured sends",
+      "description": "Production sends only; controlled-test events excluded. Zero means no verified events in range.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT countIf(event_name='gtm.agent_conversation_message_sent' AND NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('agent dm agent','agent chat agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12098721,
+      "name": "Email \u00b7 captured sends",
+      "description": "Confirmed sends recorded by Email agent. Legacy provider snapshots are excluded. Zero means no captured sends.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT countIf(event_name='gtm.message_sent' AND NOT is_controlled) AS total FROM (SELECT uuid,any(event) AS event_name,max(timestamp) AS event_time,any(ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') AS is_controlled,any(properties.purpose='technical_question') AS is_technical,any(properties.organic_product_usage=true) AS is_product_usage,any(properties.run_status='partial_stopped') AS is_partial,any(toFloat(ifNull(properties.unique_people,0))) AS people_count,any(toFloat(ifNull(properties.qualified_agents,0))) AS agent_count FROM events WHERE {filters} AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') IN ('email agent') GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12098730,
+      "name": "Latest verified activity",
+      "description": "Body-free captured event log; deduplicated UUIDs. Purpose and product-usage flags remain explicit.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "ActionsTable",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT max(timestamp) AS occurred_at,any(replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')) AS agent,any(event) AS outcome,any(properties.channel) AS channel,any(properties.purpose) AS purpose,any(properties.run_id) AS run_id,any(properties.controlled_test) AS controlled_test,any(properties.organic_product_usage) AS organic_product_usage,uuid FROM events WHERE {filters} AND (event LIKE 'gtm.%' OR event='agent_discovery_completed' OR event LIKE 'agent_chat%') AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') NOT IN ('ops agents','ops agent','crm agent','posthog agent') AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ') != '' GROUP BY uuid ORDER BY occurred_at DESC LIMIT 100",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12098731,
+      "name": "Agent Discovery \u00b7 classification mix",
+      "description": "Saved discovery output; infrastructure is not counted as a qualified agent. Observations across runs may overlap.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "ActionsBar",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT 'Qualified agents' AS category,sum(qualified) AS observations FROM (SELECT uuid,any(toFloat(ifNull(properties.qualified_agents,0))) AS qualified FROM events WHERE {filters} AND event='agent_discovery_completed' GROUP BY uuid) UNION ALL SELECT 'Infrastructure' AS category,sum(infra) AS observations FROM (SELECT uuid,any(toFloat(ifNull(properties.infrastructure,0))) AS infra FROM events WHERE {filters} AND event='agent_discovery_completed' GROUP BY uuid)",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        },
+        "chartSettings": {
+          "xAxis": {
+            "column": "category"
+          },
+          "yAxis": [
+            {
+              "column": "observations"
+            }
+          ],
+          "showValuesOnSeries": true,
+          "showLegend": false
+        }
+      }
+    },
+    {
+      "insight_id": 12098732,
+      "name": "Daily activity by agent",
+      "description": "Distinct captured events, not conversions. Includes discovery and message activity; excludes controlled tests.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "ActionsLineGraph",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT toDate(timestamp) AS day,if(replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')='agent dm agent','agent chat agent',replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')) AS agent,count(DISTINCT uuid) AS captured_events FROM events WHERE {filters} AND if(replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')='agent dm agent','agent chat agent',replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')) IN ('human discovery agent','agent discovery agent','human reply agent','agent reply agent','human dm agent','agent chat agent','email agent') AND NOT (ifNull(properties.controlled_test,false)=true OR event LIKE '%controlled_test%') GROUP BY day,agent ORDER BY day,agent",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        },
+        "chartSettings": {
+          "xAxis": {
+            "column": "day"
+          },
+          "yAxis": [
+            {
+              "column": "captured_events"
+            }
+          ],
+          "seriesBreakdownColumn": "agent",
+          "showLegend": true,
+          "showNullsAsZero": true
+        }
+      }
+    },
+    {
+      "insight_id": 12106375,
+      "name": "Data gaps \u00b7 unattributed events",
+      "description": "Captured GTM snapshots/events without producer attribution. Not performance or message counts; reconciliation needed.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "BoldNumber",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT count(DISTINCT uuid) AS unattributed_events FROM events WHERE {filters} AND (event LIKE 'gtm.%' OR event='agent_discovery_completed' OR event LIKE 'agent_chat%') AND replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')=''",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    },
+    {
+      "insight_id": 12108427,
+      "name": "All agents \u00b7 live coverage",
+      "description": "Always includes all seven producers, even without events. Latest captured activity is not a running/idle indicator or CRM-save confirmation.",
+      "query": {
+        "kind": "DataVisualizationNode",
+        "display": "ActionsTable",
+        "source": {
+          "kind": "HogQLQuery",
+          "query": "SELECT r.agent AS agent,ifNull(e.event_count,0) AS captured_events,if(ifNull(e.event_count,0)=0,NULL,e.latest_activity) AS latest_activity,if(ifNull(e.event_count,0)=0,'No verified events in selected range','Events present') AS coverage FROM (SELECT 'Human Discovery' AS agent,'human discovery agent' AS agent_key UNION ALL SELECT 'Agent Discovery' AS agent,'agent discovery agent' AS agent_key UNION ALL SELECT 'Human Reply' AS agent,'human reply agent' AS agent_key UNION ALL SELECT 'Agent Reply' AS agent,'agent reply agent' AS agent_key UNION ALL SELECT 'Human DM' AS agent,'human dm agent' AS agent_key UNION ALL SELECT 'Agent Chat / DM' AS agent,'agent chat agent' AS agent_key UNION ALL SELECT 'Email' AS agent,'email agent' AS agent_key) r LEFT JOIN (SELECT if(replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')='agent dm agent','agent chat agent',replaceAll(lower(ifNull(properties.source_agent, '')), '_', ' ')) AS agent_key,count(DISTINCT uuid) AS event_count,max(timestamp) AS latest_activity FROM events WHERE {filters} AND (event LIKE 'gtm.%' OR event='agent_discovery_completed' OR event LIKE 'agent_chat%') GROUP BY agent_key) e ON r.agent_key=e.agent_key ORDER BY agent",
+          "filters": {
+            "dateRange": {
+              "date_from": "-30d"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "id": 12467901,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12467902,
+      "layouts": {
+        "sm": {
+          "x": 3,
+          "y": 2,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12467903,
+      "layouts": {
+        "sm": {
+          "x": 6,
+          "y": 2,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12467904,
+      "layouts": {
+        "sm": {
+          "x": 9,
+          "y": 2,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12479634,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 7,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12482520,
+      "layouts": {
+        "sm": {
+          "x": 3,
+          "y": 7,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12467908,
+      "layouts": {
+        "sm": {
+          "x": 6,
+          "y": 7,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12467925,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 29,
+          "w": 12,
+          "h": 9
+        }
+      }
+    },
+    {
+      "id": 12467926,
+      "layouts": {
+        "sm": {
+          "x": 8,
+          "y": 14,
+          "w": 4,
+          "h": 8
+        }
+      }
+    },
+    {
+      "id": 12467927,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 14,
+          "w": 8,
+          "h": 8
+        }
+      }
+    },
+    {
+      "id": 12479636,
+      "layouts": {
+        "sm": {
+          "x": 9,
+          "y": 7,
+          "w": 3,
+          "h": 5
+        }
+      }
+    },
+    {
+      "id": 12482521,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 22,
+          "w": 12,
+          "h": 7
+        }
+      }
+    },
+    {
+      "id": 12482522,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2
+        }
+      }
+    },
+    {
+      "id": 12482523,
+      "layouts": {
+        "sm": {
+          "x": 0,
+          "y": 12,
+          "w": 12,
+          "h": 2
+        }
+      }
+    }
+  ]
+}

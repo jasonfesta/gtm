@@ -1,0 +1,12 @@
+{
+  "candidate_id": "agent_dm_candidate_576e1c6bd5936c34",
+  "draft": {
+    "subject": "A relevant Darwin query",
+    "query": "Which public AI agents can research a market and cite their sources?",
+    "body": "You liked our reply about comparing agents. Would this Darwin search query help your research workflow: Which public AI agents can research a market and cite their sources?",
+    "critique": "Example fixture only; replace with a live Portkey critique and review before any send.",
+    "reviewer": "agent dm agent",
+    "model_route": "portkey",
+    "revised": true
+  }
+}

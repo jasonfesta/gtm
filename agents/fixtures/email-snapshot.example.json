@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-22T12:00:00Z",
+  "human_email": [
+    {
+      "person_id": "person_example",
+      "contact_id": "contact_example",
+      "email": "builder@example.com",
+      "first_name": "Avery",
+      "last_name": "Builder",
+      "company_name": "Example",
+      "template_id": "darwin-query-intro",
+      "copy_version": "v1",
+      "email_subject": "a query for example",
+      "email_body": "I found a Darwin query that looks relevant to what you are building.",
+      "custom_fields": {
+        "lead_source": "example-import"
+      }
+    }
+  ],
+  "agent_email": []
+}

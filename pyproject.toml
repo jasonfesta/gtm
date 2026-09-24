@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darwin-gtm"
+version = "0.1.0"
+description = "Manually operated GTM agents with a shared CRM and verified handoffs"
+requires-python = ">=3.12"
+dependencies = [
+  "psycopg[binary]==3.3.4",
+  "requests>=2.32,<3",
+  "sqlglot==28.10.1",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["ruff==0.16.2"]
+
+# This operator workspace uses an editable install; keep it with its private state
+# and repository policy/schema assets rather than deploying a standalone wheel.
+[tool.setuptools.packages.find]
+where = ["runtime"]
+include = ["crm", "gtm_agent_runtime"]
+
+[tool.ruff]
+# Portable source lint. Do not inherit an operator's global Ruff settings.
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+  ".codex-worktrees",
+  ".venv",
+  "node_modules",
+  "accounts",
+  "archive",
+  "evidence",
+  "exports",
+  "logs",
+  "history",
+  "drafts",
+  "backups",
+  "outputs",
+  "data",
+  ".loop-maker-runtime",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["crm", "gtm_agent_runtime"]

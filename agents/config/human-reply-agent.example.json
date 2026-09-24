@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "mode": "manual",
+  "channel": "x",
+  "account": {
+    "handle": "replace-with-verified-handle",
+    "profile_url": "https://x.com/replace-with-verified-handle"
+  },
+  "surface": "x_pro",
+  "browser_panel": "right",
+  "portkey_credentials": ".local-credentials/portkey.json",
+  "public_contact_email": null,
+  "state_path": "runtime/data/human-reply-agent.sqlite3",
+  "handoff_root": "runtime/logs/human-reply-agent",
+  "schedule_enabled": false
+}

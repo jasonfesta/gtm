@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "workspace_root": null,
+  "operator": null,
+  "updated_at": null,
+  "stages": {
+    "workspace": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "dependencies": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "private_data_and_paths": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "accounts": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "local_validation": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "product_example": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "local_preparation": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "channel_implementation": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "attribution": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "local_rehearsal": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "copy_finalization": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": null
+    },
+    "automation_setup": {
+      "status": "pending",
+      "checked_at": null,
+      "evidence": [],
+      "next_action": "After connections pass, discover/reuse/create and activate only the three preparation/monitoring tasks; verify first runs."
+    }
+  },
+  "automations": {
+    "daily_reply_watcher": {
+      "task_id": null,
+      "host_id": null,
+      "automation_id": null,
+      "status": "pending",
+      "timezone": "America/New_York",
+      "first_run_status": "pending",
+      "evidence": []
+    },
+    "daily_timeline_watcher": {
+      "task_id": null,
+      "host_id": null,
+      "automation_id": null,
+      "status": "pending",
+      "timezone": "America/New_York",
+      "first_run_status": "pending",
+      "evidence": []
+    },
+    "daily_outbound": {
+      "task_id": null,
+      "host_id": null,
+      "automation_id": null,
+      "status": "pending",
+      "timezone": "America/New_York",
+      "first_run_status": "pending",
+      "evidence": []
+    }
+  }
+}

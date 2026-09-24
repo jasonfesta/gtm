@@ -1,0 +1,8 @@
+{
+  "backend": "postgresql",
+  "schema": "crm_gtm",
+  "credential_file": "accounts/crm-runtime.url",
+  "expected_host": "REPLACE_WITH_VERIFIED_DIRECT_HOST",
+  "expected_database": "neondb",
+  "operator_role": "REPLACE_WITH_INDIVIDUAL_CRM_ROLE"
+}

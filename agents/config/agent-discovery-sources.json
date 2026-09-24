@@ -1,0 +1,66 @@
+{
+  "daily_target": 250,
+  "total_target": 600,
+  "candidate_pool_per_source": 500,
+  "max_candidates_per_run": 750,
+  "active_project_days": 30,
+  "active_developer_days": 30,
+  "github_token_env": "GITHUB_TOKEN",
+  "github_credentials_file": "data/agent-discovery/github.json",
+  "timeout_seconds": 30,
+  "sources": [
+    {
+      "id": "hermes_skills_hub",
+      "kind": "json_index",
+      "url": "https://hermes-agent.nousresearch.com/docs/api/skills-index.json",
+      "items_key": "skills",
+      "repo_field": "repo"
+    },
+    {
+      "id": "openclaw_showcase",
+      "kind": "html",
+      "url": "https://openclaw.ai/showcase"
+    },
+    {
+      "id": "clawhub",
+      "kind": "clawhub",
+      "url": "https://clawhub.ai/",
+      "detail_limit": 500
+    },
+    {
+      "id": "openclaw_github",
+      "kind": "github_repo",
+      "url": "https://github.com/openclaw/openclaw"
+    },
+    {
+      "id": "hermes_atlas",
+      "kind": "html",
+      "url": "https://hermesatlas.com/ecosystem/"
+    },
+    {
+      "id": "hermes_atlas_github",
+      "kind": "github_repo",
+      "url": "https://github.com/ksimback/hermes-ecosystem"
+    },
+    {
+      "id": "awesome_hermes_agent",
+      "kind": "github_readme",
+      "url": "https://github.com/0xarkstar/awesome-hermes-agent"
+    },
+    {
+      "id": "hermes_showcase_reddit",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/hermesagent/comments/1w631p8/showcase_thursday_drop_your_hermes_projects_here/"
+    },
+    {
+      "id": "hermes_use_cases_reddit",
+      "kind": "reddit",
+      "url": "https://www.reddit.com/r/hermesagent/comments/1t6gf4j/megathread_hermes_agent_use_cases_what_the/"
+    },
+    {
+      "id": "hermes_agent_github",
+      "kind": "github_repo",
+      "url": "https://github.com/NousResearch/hermes-agent"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "handoff_id": "human-discovery-example-run",
+  "source_agent": "human discovery agent",
+  "operations": [
+    {
+      "action": "human_upsert",
+      "payload": {
+        "identity_key": "profile:x:example",
+        "name": "Example Builder",
+        "profile_url": "https://x.com/example",
+        "audience": "assistant developer",
+        "darwin_relevance": "Building an assistant that could use Darwin.",
+        "sources": [
+          {
+            "source": "x",
+            "source_id": "example-post-id",
+            "profile_url": "https://x.com/example",
+            "source_url": "https://x.com/example/status/example-post-id",
+            "text": "Example public source text",
+            "query": "example discovery query"
+          }
+        ]
+      }
+    }
+  ]
+}

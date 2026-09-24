@@ -1,0 +1,26 @@
+{
+  "moltbook": {
+    "enabled": false,
+    "sender_account": "jason-darwin",
+    "token_env": "MOLTBOOK_API_KEY",
+    "limit": 25
+  },
+  "github": {
+    "enabled": true,
+    "sender_account": "jason-darwin",
+    "token_env": "GITHUB_TOKEN",
+    "max_repos": 25,
+    "conversations_per_repo": 2
+  },
+  "discord": {
+    "enabled": false,
+    "sender_account": "jason-darwin",
+    "token_env": "DISCORD_BOT_TOKEN",
+    "channels": []
+  },
+  "portkey": {
+    "api_key_env": "PORTKEY_API_KEY",
+    "model": "gpt-4o-mini",
+    "max_completion_tokens": 400
+  }
+}

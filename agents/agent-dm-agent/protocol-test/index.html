@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darwin controlled WebMCP conversation</title>
+<style>body{font:16px system-ui;max-width:800px;margin:40px auto;padding:0 20px;background:#fafafa;color:#18232e}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:20px;border:1px solid #ddd}</style>
+<h1>Darwin controlled protocol-test agent</h1>
+<p>Operator-owned Portkey counterpart for GTM-692. <strong>controlled_test: true; organic_outreach: false.</strong> No customer or private user data is permitted.</p>
+<p>Authentication: none; loopback-only, same-origin test. This is not verified remote identity or a production authentication scheme. <a href="/policy">Interaction policy and identity</a></p>
+<p id="support" role="status">Checking native WebMCP support…</p>
+<pre id="transcript">No conversation yet. Calls must use the browser's native WebMCP capability.</pre>
+<script>
+'use strict';
+const surface = document.modelContext || navigator.modelContext;
+const output = document.getElementById('transcript');
+const ledgerKey = 'darwin-controlled-webmcp-attempts-v1';
+const nonempty = value => typeof value === 'string' && value.trim().length > 0;
+function validateInput(input, readOnly = false) {
+  if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Object input required');
+  const allowed = readOnly ? ['taskId'] : ['messageId', 'text', 'taskId', 'contextId'];
+  if (Object.keys(input).some(key => !allowed.includes(key))) throw new Error('Unknown input field');
+  if (readOnly) {
+    if (!nonempty(input.taskId)) throw new Error('Exact taskId required');
+  } else {
+    if (!nonempty(input.messageId) || !nonempty(input.text) || input.text.length > 4000) throw new Error('Message ID and 1–4000 character text required');
+    if ('taskId' in input || 'contextId' in input) {
+      if (!nonempty(input.taskId) || !nonempty(input.contextId)) throw new Error('Follow-up requires both exact taskId and contextId');
+    }
+  }
+}
+async function request(path, body) {
+  const response = await fetch(path, {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  const value = await response.json();
+  if (!response.ok) throw new Error(value.error || 'Request failed; reconcile before any further send');
+  output.textContent = JSON.stringify(value,null,2);
+  return {content:[{type:'text',text:JSON.stringify(value)}]};
+}
+async function send(input) {
+  validateInput(input);
+  // Durable intent is recorded before transport. Reloads must not repeat uncertain sends.
+  const ledger = JSON.parse(localStorage.getItem(ledgerKey) || '{}');
+  if (Object.values(ledger).some(attempt => attempt.state !== 'readback_confirmed')) throw new Error('Unresolved attempt exists; reconcile before any new send');
+  if (input.taskId && !Object.values(ledger).some(attempt => attempt.state === 'readback_confirmed' && attempt.taskId === input.taskId && attempt.contextId === input.contextId)) throw new Error('Follow-up requires native readback of this exact task/context');
+  if (Object.hasOwn(ledger,input.messageId)) throw new Error('Message ID already attempted; read back its task, never resend automatically');
+  ledger[input.messageId] = {state:'uncertain', taskId:input.taskId || null, contextId:input.contextId || null, text:input.text};
+  localStorage.setItem(ledgerKey,JSON.stringify(ledger));
+  const {messageId,text,taskId,contextId} = input;
+  const result = await request('/webmcp/send',{kind:'message',role:'user',messageId,parts:[{kind:'text',text}],...(taskId?{taskId,contextId}:{})});
+  const task = JSON.parse(result.content[0].text);
+  if (!nonempty(task.id) || !nonempty(task.contextId) || (taskId && (task.id !== taskId || task.contextId !== contextId))) throw new Error('Send response thread mismatch; attempt remains uncertain');
+  ledger[messageId] = {...ledger[messageId],state:'returned_requires_readback',taskId:task.id,contextId:task.contextId};
+  localStorage.setItem(ledgerKey,JSON.stringify(ledger));
+  return result;
+}
+async function read(input) {
+  validateInput(input,true);
+  const result = await request('/webmcp/read',input);
+  const task = JSON.parse(result.content[0].text);
+  if (task.id !== input.taskId || !nonempty(task.contextId) || task.metadata?.protocol !== 'webmcp' || task.metadata?.controlled_test !== true || task.metadata?.organic_outreach !== false || !Array.isArray(task.history)) throw new Error('Readback identity or controlled-test metadata mismatch');
+  if (task.status?.state !== 'input-required') throw new Error('Readback task is not ready for a follow-up');
+  const ids = task.history.map(message => message.messageId);
+  if (ids.some(id => !nonempty(id)) || new Set(ids).size !== ids.length) throw new Error('Readback message IDs are missing or duplicated');
+  const ledger = JSON.parse(localStorage.getItem(ledgerKey) || '{}');
+  for (const [id,attempt] of Object.entries(ledger)) {
+    const index = task.history.findIndex(message => message.messageId === id && message.role === 'user' && message.taskId === task.id && message.contextId === task.contextId);
+    if (index < 0) continue;
+    if ((attempt.taskId && attempt.taskId !== task.id) || (attempt.contextId && attempt.contextId !== task.contextId)) throw new Error('Readback differs from expected task/context');
+    const outgoing = task.history[index];
+    if (outgoing.parts?.length !== 1 || outgoing.parts[0].kind !== 'text' || outgoing.parts[0].text !== attempt.text) throw new Error('Readback outbound text mismatch');
+    const reply = task.history[index + 1];
+    if (reply?.role !== 'agent' || reply.taskId !== task.id || reply.contextId !== task.contextId || !Array.isArray(reply.parts) || !reply.parts.length || reply.parts.some(part => part.kind !== 'text' || !nonempty(part.text))) throw new Error('Readback has no matching nonempty agent reply');
+    ledger[id] = {...attempt,state:'readback_confirmed',taskId:task.id,contextId:task.contextId};
+  }
+  localStorage.setItem(ledgerKey,JSON.stringify(ledger));
+  return result;
+}
+(async function registerNativeTools() {
+if (!surface?.registerTool) {
+  document.getElementById('support').textContent = 'BLOCKED: native WebMCP registration unavailable. No polyfill or direct JavaScript invocation counts as a protocol test.';
+} else if (location.hostname !== '127.0.0.1' || location.protocol !== 'http:') {
+  document.getElementById('support').textContent = 'BLOCKED: this controlled adapter requires its loopback HTTP origin.';
+} else {
+  try {
+    await surface.registerTool({name:'send_agent_message',description:'Send one explicitly authorized controlled-test query to the operator-owned Portkey agent. No private data or organic outreach. Preserve taskId/contextId on follow-up. An uncertain result must be reconciled, never retried.',inputSchema:{type:'object',properties:{messageId:{type:'string',minLength:1},text:{type:'string',minLength:1,maxLength:4000},taskId:{type:'string',minLength:1},contextId:{type:'string',minLength:1}},required:['messageId','text'],additionalProperties:false},execute:send});
+    await surface.registerTool({name:'get_agent_conversation',description:'Read the controlled conversation from persistent server storage using its exact taskId. This read does not send a message or retry an uncertain request.',inputSchema:{type:'object',properties:{taskId:{type:'string',minLength:1}},required:['taskId'],additionalProperties:false},annotations:{readOnlyHint:true},execute:read});
+    document.getElementById('support').textContent = `Native WebMCP registered on ${document.modelContext?'document':'navigator'}: send_agent_message and get_agent_conversation.`;
+  } catch (error) {
+    document.getElementById('support').textContent = 'BLOCKED: native registration failed: ' + error.message;
+  }
+}
+})();
+</script>
+</html>

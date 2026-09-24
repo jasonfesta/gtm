@@ -1,0 +1,23 @@
+ChatGPT
+Claude
+Grok
+Perplexity
+Muse Code
+Cursor
+GitHub Copilot / VS Code
+Gemini CLI
+Google Antigravity
+Grok Build
+Devin
+Replit Agent
+Windsurf
+OpenCode
+Hermes Agent
+OpenClaw
+OpenAI Agents SDK
+Anthropic SDK
+OpenRouter Agent SDK
+Vercel AI SDK
+Google ADK
+LangChain / LangGraph
+Pydantic AI

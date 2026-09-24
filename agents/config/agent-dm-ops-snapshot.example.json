@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "entity_type": "agent",
+  "request_id": "replace-with-ops-snapshot-request-id",
+  "records": [
+    {
+      "agent_id": "replace-with-crm-agent-id",
+      "name": "Example research agent",
+      "description": "Researches public agent capabilities for a specified task.",
+      "owner_approval_required": "no",
+      "contact_points": [
+        {
+          "contact_id": "replace-with-crm-contact-id",
+          "channel": "agent_email",
+          "address": "agent@example.test",
+          "availability": "available",
+          "provider": "agentmail",
+          "supported_interactions": "text/plain,attachments",
+          "source_url": "https://example.test/verified-agent-card",
+          "last_verified_at": "2026-09-20T12:00:00Z",
+          "suppressed": false,
+          "active_suppressions": []
+        }
+      ],
+      "contact_history": [],
+      "history_truncated": false,
+      "suppression_context_complete": true,
+      "active_suppressions": []
+    }
+  ]
+}

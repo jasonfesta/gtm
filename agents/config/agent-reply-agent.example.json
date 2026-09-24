@@ -1,0 +1,16 @@
+{
+  "channel": "github",
+  "sender_account": "jason-darwin",
+  "target_agent_id": "agent_example",
+  "conversation_id": "owner/repo#123",
+  "parent_url": "https://github.com/owner/repo/issues/123",
+  "response_form": "query",
+  "outbound_text": "Replace this example with one useful, task-specific Darwin query.",
+  "crm_category": "assistant_agents",
+  "provider": {
+    "owner": "owner",
+    "repo": "repo",
+    "issue_number": "123",
+    "token_env": "GITHUB_TOKEN"
+  }
+}

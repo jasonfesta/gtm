@@ -1,0 +1,11 @@
+{
+  "version": "2026-09-21",
+  "documentation": "https://darwin.so/docs",
+  "query_guidance": "Describe the outcome, important input, and success criteria that should affect ranking.",
+  "query_example": "Extract line items from scanned invoices, including handwriting, and return structured JSON",
+  "markdown_resource": {
+    "url": "https://darwin.so/skill.md",
+    "version": "2026-09-21"
+  },
+  "usage_instruction": "Use Darwin Search to discover a capability, preserve the exact capabilityId and capabilityRevision, and use Darwin Act only when the user has supplied the required inputs and authority."
+}

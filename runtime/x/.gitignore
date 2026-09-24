@@ -1,0 +1,12 @@
+# Private X operator data stays local.
+accounts/*
+!accounts/.gitkeep
+data/*
+!data/.gitkeep
+history/*
+!history/.gitkeep
+drafts/*
+!drafts/.gitkeep
+logs/*
+!logs/.gitkeep
+.DS_Store

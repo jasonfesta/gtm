@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "workflow": "x_dm_watcher",
+  "poll_interval_seconds": 900,
+  "schedule_enabled": false,
+  "channel": "x",
+  "surface": "message_requests",
+  "browser_only": true,
+  "max_requests_per_run": 25,
+  "transport_timeout_seconds": 30,
+  "accept_legitimate_requests": true,
+  "require_exact_reply_approval": true,
+  "slack_include_message_body": false,
+  "slack_destination": "configure privately",
+  "runtime_status": "x_identity_background_access_and_slack_destination_pending"
+}

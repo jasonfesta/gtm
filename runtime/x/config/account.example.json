@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "account_id": "x:replace-with-reviewed-stable-id",
+  "identity": {
+    "handle": "replace-with-verified-handle",
+    "profile_url": "https://x.com/replace-with-verified-handle"
+  },
+  "timezone": "America/New_York",
+  "mode": "preview",
+  "allowed_actions": [
+    "scan",
+    "draft"
+  ],
+  "targeting_policy": {
+    "generation": "fresh_daily_v1",
+    "inherit_legacy_targeting": false,
+    "inherit_legacy_exclusions": false,
+    "current_special_exclusions": []
+  },
+  "public_replies": {
+    "enabled": false,
+    "author_repeat_policy": "crm_rules",
+    "never_follow": true,
+    "source": "following"
+  },
+  "schedule": {
+    "enabled": false
+  },
+  "contact_rules": {
+    "policy": "runtime/Rules.md"
+  }
+}

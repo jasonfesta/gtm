@@ -1,0 +1,11 @@
+{
+  "status": "confirmed",
+  "channel": "agent_email",
+  "provider": "agentmail",
+  "recipient": "agent@example.test",
+  "provider_id": "replace-with-provider-message-id",
+  "sent_at": "2026-09-21T12:30:00Z",
+  "observed_at": "2026-09-21T12:31:00Z",
+  "message_url": "https://example.test/messages/replace-with-provider-message-id",
+  "evidence": "replace-with-provider-readback-reference"
+}

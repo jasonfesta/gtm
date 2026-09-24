@@ -1,0 +1,41 @@
+agent tool
+tool discovery
+agent discovery
+assistant developer
+assistant builder
+building an assistant
+agent sdk
+assistant sdk
+model context protocol
+mcp
+function calling
+tool calling
+open source agent
+open-source agent
+ChatGPT agent
+ChatGPT tools
+Claude agent
+Claude Code
+Grok Build
+Grok agent
+Perplexity agent
+Muse Code
+Cursor agent
+GitHub Copilot
+VS Code agent
+Gemini CLI
+Google Antigravity
+Devin AI
+Replit Agent
+Windsurf agent
+OpenCode
+OpenClaw
+Hermes Agent
+OpenAI Agents SDK
+Anthropic SDK
+OpenRouter Agent SDK
+Vercel AI SDK
+Google ADK
+LangChain
+LangGraph
+Pydantic AI

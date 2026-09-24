@@ -1,0 +1,56 @@
+# Independent repository retained locally; do not accidentally publish its private files.
+/control-plane/
+# Local historical snapshots can contain credentials, private exports, runtimes, and caches.
+/runtime/archive/
+.DS_Store
+__pycache__/
+
+.venv/
+.ruff_cache/
+.pytest_cache/
+/outputs/
+/runtime/gtm_agent_runtime/providers/moltbook/runs/
+
+# Secrets and local tooling in any folder. Examples remain reviewable source.
+.local-credentials/
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+node_modules/
+.codex-worktrees/
+# All source evidence is private, regardless of capture format.
+/runtime/evidence/
+
+# Defense in depth for private runtime folders anywhere in the workspace.
+accounts/
+data/
+evidence/
+review/
+drafts/
+exports/
+logs/
+history/
+backups/
+imports/
+*.db
+*.db-wal
+*.db-shm
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+
+# Generated run reports and reconciliation outputs.
+reports/
+
+# Local editable-install metadata.
+*.egg-info/
+build/
+dist/

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account_id": "linkedin:replace-with-reviewed-local-id",
+  "identity": {
+    "linkedin_slug": "replace-with-verified-slug",
+    "profile_url": "https://www.linkedin.com/in/replace-with-verified-slug/",
+    "display_name": "Replace With Verified Name"
+  },
+  "timezone": "America/New_York",
+  "local_root": "/absolute/path/to/runtime/linkedin",
+  "database_path": "/absolute/path/to/runtime/linkedin/data/linkedin.sqlite3",
+  "stop_file": "/absolute/path/to/runtime/linkedin/accounts/account.stop",
+  "browser": {
+    "adapter_path": "/absolute/path/to/approved/browser-adapter.js",
+    "profile_key": "replace-with-approved-profile-key"
+  },
+  "mode": "preview",
+  "allowed_actions": [
+    "scan",
+    "draft"
+  ],
+  "targeting_policy": {
+    "generation": "fresh_daily_v1",
+    "inherit_legacy_targeting": false,
+    "inherit_legacy_exclusions": false,
+    "current_special_exclusions": []
+  },
+  "public_replies": {
+    "enabled": false,
+    "per_run": 10,
+    "daily_cap": 20,
+    "author_repeat_policy": "crm_rules",
+    "scan_scrolls": 12,
+    "scan_limit": 60,
+    "never_connect_or_follow": true,
+    "max_words": 24
+  },
+  "dm_replies": {
+    "enabled": false,
+    "monitoring_not_before": "replace-after-bounded-inbox-baseline",
+    "scan_limit": 30,
+    "max_per_run": 20,
+    "max_words": 35,
+    "never_initiate": true,
+    "skip_inmail": true,
+    "skip_sponsored": true,
+    "require_one_to_one": true,
+    "surface_for_review_when_sensitive_or_ambiguous": true
+  },
+  "schedule": {
+    "timezone": "America/New_York",
+    "times": [
+      "09:00",
+      "16:00"
+    ],
+    "enabled": false
+  },
+  "contact_rules": {
+    "policy": "runtime/Rules.md"
+  }
+}

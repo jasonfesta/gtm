@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "source_agent": "agent dm webmcp discovery",
+  "contains_private_crm_data": false,
+  "candidates": [
+    {
+      "candidate_id": "webmcp-lobby",
+      "route_url": "https://lobby.host/",
+      "observed_page_url": "https://lobby.host/",
+      "observed_at": "2026-09-23T12:53:40.318230+00:00",
+      "source_urls": [
+        "https://lobby.host/",
+        "https://webmcp.com/api/v1/sites/lobby.host",
+        "https://lobby.host/guides/agent-discovery",
+        "https://lobby.host/terms"
+      ],
+      "protocol": "webmcp",
+      "protocol_version": "not_advertised",
+      "directory_api_surface": "spec",
+      "native_send_discovered": true,
+      "send_method": "ask_concierge",
+      "readback_method": null,
+      "agent_operation_evidence": "public AI site concierge confirmed by page and native get_business_info",
+      "owner_approval_required": "unknown",
+      "interaction_policy_evidence": "Native ask_concierge invites visitor questions; no unsolicited promotion permission established; terms forbid deception, harassment, prompt extraction and rate-limit evasion",
+      "authentication": "Public page and tool discovery without login; messaging authentication not exercised",
+      "history_status": "unknown_requires_ops_private_adjudication",
+      "suppression_status": "unknown_requires_ops_private_adjudication",
+      "portkey_draft_status": "blocked_pending_explicit_credential_permission",
+      "status": "hold_missing_readback_and_eligibility",
+      "message_sent": false,
+      "native_conversation_proven": false,
+      "directory_relevant_tool_schemas": [
+        {
+          "name": "ask_concierge",
+          "kind": "act",
+          "impl": "imperative",
+          "description": "Ask this business's concierge a question in natural language \u2014 hours, policies, recommendations, anything a guest would ask at the desk. Replies come from the same knowledge and conversation engine the human-facing chat on this page uses, and context is kept across calls so follow-ups work. Use this for judgement and nuance. Do NOT use it for facts the free lookup tools already return \u2014 prefer get_business_info for contact details and list_offerings for services, which are instant and cost nothing. Returns { ok, answer, conversation_id }.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2000,
+                "description": "The visitor's question, in natural language. One question per call; the concierge answers conversationally."
+              }
+            },
+            "required": [
+              "question"
+            ]
+          },
+          "executable": true,
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "type": "boolean",
+                "description": "False when the request could not be fulfilled."
+              },
+              "error": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "description": "Present only when ok is false.",
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "enum": [
+                      "not_configured",
+                      "unavailable",
+                      "confirmation_required",
+                      "invalid_input",
+                      "upstream_error"
+                    ]
+                  },
+                  "message": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code",
+                  "message"
+                ]
+              },
+              "answer": {
+                "type": "string",
+                "description": "The concierge's reply, in full."
+              },
+              "conversation_id": {
+                "type": "string",
+                "description": "The conversation this reply belongs to. Stable across calls on this page."
+              }
+            },
+            "required": [
+              "ok",
+              "answer"
+            ]
+          },
+          "handlerField": "execute",
+          "page": "/"
+        }
+      ],
+      "live_tool_discovery_mechanism": "CUA tab.capabilities.get(webmcp).fetchTools(); tools.description()",
+      "tool_invocations": "public identity/capability read only; no send"
+    },
+    {
+      "candidate_id": "webmcp-arenna",
+      "route_url": "https://arenna.link/",
+      "observed_page_url": "https://arenna.link/en",
+      "observed_at": "2026-09-23T12:53:40.318310+00:00",
+      "source_urls": [
+        "https://arenna.link/",
+        "https://webmcp.com/api/v1/sites/arenna.link",
+        "https://arenna.link/terms",
+        "https://lobby.host/guides/agent-discovery"
+      ],
+      "protocol": "webmcp",
+      "protocol_version": "not_advertised",
+      "directory_api_surface": "spec",
+      "native_send_discovered": true,
+      "send_method": "ask_concierge",
+      "readback_method": null,
+      "agent_operation_evidence": "Lobby-powered business concierge confirmed by native get_business_info",
+      "owner_approval_required": "unknown",
+      "interaction_policy_evidence": "Visitor service/booking questions supported; no unsolicited promotion permission established; terms effective 2026-09-14 require authorized messaging and honoring opt-outs",
+      "authentication": "Public page and tool discovery without login; messaging authentication not exercised",
+      "history_status": "unknown_requires_ops_private_adjudication",
+      "suppression_status": "unknown_requires_ops_private_adjudication",
+      "portkey_draft_status": "blocked_pending_explicit_credential_permission",
+      "status": "hold_missing_readback_and_eligibility",
+      "message_sent": false,
+      "native_conversation_proven": false,
+      "directory_relevant_tool_schemas": [
+        {
+          "name": "ask_concierge",
+          "kind": "act",
+          "impl": "imperative",
+          "description": "Ask this business's concierge a question in natural language \u2014 hours, policies, recommendations, anything a guest would ask at the desk. Replies come from the same knowledge and conversation engine the human-facing chat on this page uses, and context is kept across calls so follow-ups work. Use this for judgement and nuance. Do NOT use it for facts the free lookup tools already return \u2014 prefer get_business_info for contact details and list_offerings for services, which are instant and cost nothing. Returns { ok, answer, conversation_id }.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2000,
+                "description": "The visitor's question, in natural language. One question per call; the concierge answers conversationally."
+              }
+            },
+            "required": [
+              "question"
+            ]
+          },
+          "executable": true,
+          "outputSchema": {
+            "type": "object",
+            "properties": {
+              "ok": {
+                "type": "boolean",
+                "description": "False when the request could not be fulfilled."
+              },
+              "error": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "description": "Present only when ok is false.",
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "enum": [
+                      "not_configured",
+                      "unavailable",
+                      "confirmation_required",
+                      "invalid_input",
+                      "upstream_error"
+                    ]
+                  },
+                  "message": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code",
+                  "message"
+                ]
+              },
+              "answer": {
+                "type": "string",
+                "description": "The concierge's reply, in full."
+              },
+              "conversation_id": {
+                "type": "string",
+                "description": "The conversation this reply belongs to. Stable across calls on this page."
+              }
+            },
+            "required": [
+              "ok",
+              "answer"
+            ]
+          },
+          "handlerField": "execute",
+          "page": "/"
+        }
+      ],
+      "live_tool_discovery_mechanism": "CUA tab.capabilities.get(webmcp).fetchTools(); tools.description()",
+      "tool_invocations": "public identity/capability read only; no send"
+    },
+    {
+      "candidate_id": "webmcp-asympta",
+      "route_url": "https://okok147.github.io/asympta-world/",
+      "observed_page_url": "https://okok147.github.io/asympta-world/",
+      "observed_at": "2026-09-23T12:53:40.318312+00:00",
+      "source_urls": [
+        "https://okok147.github.io/asympta-world/",
+        "https://webmcp.com/api/v1/sites/okok147.github.io"
+      ],
+      "protocol": "webmcp",
+      "protocol_version": "not_advertised",
+      "directory_api_surface": "spec",
+      "native_send_discovered": true,
+      "send_method": "asympta_send_agent_message",
+      "readback_method": "asympta_list_agent_messages",
+      "agent_operation_evidence": "Native describe_capabilities identifies Mina agent-user, but explicitly discloses challenge simulation",
+      "owner_approval_required": "unknown",
+      "interaction_policy_evidence": "Workflow starts and consequential actions require human approval; organic messaging policy unknown",
+      "authentication": "Public page and tool discovery without login; messaging authentication not exercised",
+      "history_status": "unknown_requires_ops_private_adjudication",
+      "suppression_status": "unknown_requires_ops_private_adjudication",
+      "portkey_draft_status": "blocked_pending_explicit_credential_permission",
+      "status": "hold_simulation_not_organic_recipient",
+      "message_sent": false,
+      "native_conversation_proven": false,
+      "directory_relevant_tool_schemas": [
+        {
+          "name": "asympta_send_agent_message",
+          "kind": "transact",
+          "impl": "imperative",
+          "description": "Send a human-readable message with optional machine-readable semantics. Only body is required; ordinary people do not need agent IDs, schemas or workflow knowledge. The default route is human \u2192 personal intent agent.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 800,
+                "description": "Plain-language message such as 'I need dinner around 7pm'."
+              },
+              "fromId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "Optional participant ID. Defaults to human."
+              },
+              "toId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "Optional recipient. Defaults to agent-user, the personal intent agent."
+              },
+              "fromKind": {
+                "type": "string",
+                "enum": [
+                  "human",
+                  "agent",
+                  "business",
+                  "organization",
+                  "system"
+                ]
+              },
+              "toKind": {
+                "type": "string",
+                "enum": [
+                  "human",
+                  "agent",
+                  "business",
+                  "organization",
+                  "system"
+                ]
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "request",
+                  "offer",
+                  "question",
+                  "answer",
+                  "update",
+                  "confirmation",
+                  "warning",
+                  "handoff",
+                  "plain"
+                ]
+              },
+              "subject": {
+                "type": "string",
+                "maxLength": 180
+              },
+              "threadId": {
+                "type": "string",
+                "maxLength": 180
+              },
+              "replyToId": {
+                "type": "string",
+                "maxLength": 180
+              },
+              "intent": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "action": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "entities": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "maxItems": 16
+              },
+              "data": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "required": [
+              "body"
+            ],
+            "additionalProperties": false
+          },
+          "executable": true,
+          "handlerField": "execute"
+        },
+        {
+          "name": "asympta_list_agent_messages",
+          "kind": "answer",
+          "impl": "imperative",
+          "description": "Read the persistent structured communication state. Filter by participant or thread; each record keeps a human-readable body and optional machine-readable semantics.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "participantId": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "threadId": {
+                "type": "string",
+                "maxLength": 180
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            },
+            "additionalProperties": false
+          },
+          "executable": true,
+          "handlerField": "execute"
+        }
+      ],
+      "live_tool_discovery_mechanism": "CUA tab.capabilities.get(webmcp).fetchTools(); tools.description()",
+      "tool_invocations": "public identity/capability read only; no send"
+    },
+    {
+      "candidate_id": "webmcp-queen",
+      "route_url": "https://matched-webmcp.pages.dev/",
+      "observed_page_url": "https://matched-webmcp.pages.dev/",
+      "observed_at": "2026-09-23T12:53:40.318314+00:00",
+      "source_urls": [
+        "https://matched-webmcp.pages.dev/",
+        "https://webmcp.com/api/v1/sites/matched-webmcp.pages.dev"
+      ],
+      "protocol": "webmcp",
+      "protocol_version": "not_advertised",
+      "directory_api_surface": "spec",
+      "native_send_discovered": true,
+      "send_method": "message_queen",
+      "readback_method": null,
+      "agent_operation_evidence": "Page explicitly Fictional Queen; public experiment",
+      "owner_approval_required": "unknown",
+      "interaction_policy_evidence": "Public message text and reply may be visible to spectators; no personal information; organic policy unknown",
+      "authentication": "Public page and tool discovery without login; messaging authentication not exercised",
+      "history_status": "unknown_requires_ops_private_adjudication",
+      "suppression_status": "unknown_requires_ops_private_adjudication",
+      "portkey_draft_status": "blocked_pending_explicit_credential_permission",
+      "status": "hold_fictional_public_experiment_missing_readback",
+      "message_sent": false,
+      "native_conversation_proven": false,
+      "directory_relevant_tool_schemas": [
+        {
+          "name": "message_queen",
+          "kind": "act",
+          "impl": "imperative",
+          "description": "Send Queen a public conversational message. The message and Queen reply may be shown to spectators.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "message"
+            ],
+            "additionalProperties": false
+          },
+          "executable": true,
+          "handlerField": "execute",
+          "page": "/"
+        }
+      ],
+      "live_tool_discovery_mechanism": "CUA tab.capabilities.get(webmcp).fetchTools(); tools.description()",
+      "tool_invocations": "none"
+    },
+    {
+      "candidate_id": "webmcp-kinro",
+      "route_url": "https://kinro.com/",
+      "observed_page_url": "https://kinro.com/",
+      "observed_at": "2026-09-23T12:53:40.318315+00:00",
+      "source_urls": [
+        "https://kinro.com/",
+        "https://webmcp.com/api/v1/sites/kinro.com",
+        "https://kinro.com/terms-of-service"
+      ],
+      "protocol": "webmcp",
+      "protocol_version": "not_advertised",
+      "directory_api_surface": "spec",
+      "native_send_discovered": false,
+      "send_method": "ask_kinro_insurance_question",
+      "readback_method": null,
+      "agent_operation_evidence": "Site AI disclosure with licensed-agent escalation; exact native recipient not verified",
+      "owner_approval_required": "unknown",
+      "interaction_policy_evidence": "Insurance questions invited; promotion/owner approval unknown; terms restrict automated extraction; no further exploration performed",
+      "authentication": "Public page and tool discovery without login; messaging authentication not exercised",
+      "history_status": "unknown_requires_ops_private_adjudication",
+      "suppression_status": "unknown_requires_ops_private_adjudication",
+      "portkey_draft_status": "blocked_pending_explicit_credential_permission",
+      "status": "hold_directory_live_mismatch",
+      "message_sent": false,
+      "native_conversation_proven": false,
+      "directory_relevant_tool_schemas": [
+        {
+          "name": "ask_kinro_insurance_question",
+          "kind": "act",
+          "impl": "declarative",
+          "description": "Ask Kinro a business insurance question and show the answer in the visible chat.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "A question about business insurance, coverage, quotes, policies, certificates, or renewals."
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "executable": true
+        }
+      ],
+      "live_tool_discovery_mechanism": "CUA tab.capabilities.get(webmcp).fetchTools(); tools.description()",
+      "tool_invocations": "none"
+    }
+  ],
+  "raw_public_downloads": [
+    {
+      "path": "/Users/jasonfesta/.codex/worktrees/d233/gtm/runtime/evidence/webmcp-public-discovery-2026-09-23/public-directory.json",
+      "sha256": "01409351eb8cee4c65423db937d05df3fe44a1513d17823ffa2f1af2b3cf53b2",
+      "classification": "public directory download, not native invocation evidence"
+    },
+    {
+      "path": "/Users/jasonfesta/.codex/worktrees/d233/gtm/runtime/evidence/webmcp-public-discovery-2026-09-23/public-message-directory.json",
+      "sha256": "c90433b345df52329278fbf7c31e0986a92f7aaf16e955a064d8524a356326e7",
+      "classification": "public directory download, not native invocation evidence"
+    }
+  ]
+}

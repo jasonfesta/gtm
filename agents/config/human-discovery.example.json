@@ -1,0 +1,27 @@
+{
+  "run_id": "human-discovery-example",
+  "observed_at": "2026-09-22T12:00:00+00:00",
+  "sources": {
+    "x": [
+      {
+        "author": {"userName": "example_builder", "name": "Example Builder"},
+        "id": "x-example-1",
+        "url": "https://x.com/example_builder/status/x-example-1",
+        "text": "I am building an AI assistant with tool calling."
+      }
+    ],
+    "reddit": [],
+    "linkedin": [],
+    "hacker_news": [],
+    "product_hunt": [],
+    "apollo": []
+  },
+  "cursors": {
+    "x": "example-x-cursor",
+    "reddit": "example-reddit-cursor",
+    "linkedin": "example-linkedin-cursor",
+    "hacker_news": "example-hn-cursor",
+    "product_hunt": "example-ph-cursor",
+    "apollo": "example-apollo-cursor"
+  }
+}

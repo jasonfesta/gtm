@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "receipt_type": "controlled_protocol_observation",
+  "run_id": "<actual stable run identifier>",
+  "controlled_test": true,
+  "organic_outreach": false,
+  "protocol": "<a2a or webmcp>",
+  "observed_at": "<actual UTC timestamp>",
+  "conversation_id": "<provider conversation identifier>",
+  "message_ids": ["<actual first message>", "<actual second message>"],
+  "provider_readback_verified": false,
+  "evidence": [{"private_local_path": "<local proof file>", "sha256": "<actual content hash>"}],
+  "crm": {
+    "scope": "fixture_only",
+    "production_records_created": 0,
+    "production_completion_claimed": false,
+    "receipt_private_local_path": null,
+    "receipt_sha256": null
+  },
+  "posthog": {
+    "project_id": 121185,
+    "event_name": "agent_chat_controlled_test_completed",
+    "event_uuid": "<stable UUID>",
+    "capture_status": "not_submitted",
+    "query_status": "not_verified",
+    "capture_receipt_private_local_path": null,
+    "query_receipt_private_local_path": null
+  }
+}

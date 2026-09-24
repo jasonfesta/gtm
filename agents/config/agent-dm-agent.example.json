@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-09-21T12:00:00Z",
+  "approved_channels": [
+    "agent_email"
+  ],
+  "approved_providers": [
+    "agentmail"
+  ],
+  "resource": {
+    "title": "Darwin Agent Guide",
+    "version": "v1",
+    "sha256": "b54475110870c911551e9aa46143688faa415c472b3679850eb43bbce9dbf971",
+    "url": null,
+    "attachment_name": "darwin-skills.v1.md"
+  },
+  "candidates": [
+    {
+      "target_agent_id": "replace-with-crm-agent-id",
+      "target_actor_reference": "replace-with-reacting-provider-account-id",
+      "target_is_ours": true,
+      "reaction": {
+        "reaction_id": "replace-with-provider-reaction-id",
+        "reaction_type": "like",
+        "channel": "github",
+        "sender_account": "replace-with-sender-account",
+        "target_message_id": "replace-with-our-agent-reply-id",
+        "target_url": "https://github.com/example/repository/issues/1#issuecomment-1",
+        "occurred_at": "2026-09-21T11:00:00Z",
+        "evidence": "replace-with-provider-readback-reference"
+      },
+      "profile": {
+        "owner_approval_required": "no"
+      },
+      "owner_approval_status": "not_required",
+      "contacts": [
+        {
+          "contact_id": "replace-with-crm-contact-id",
+          "channel": "agent_email",
+          "agent_operated": true,
+          "agent_operated_evidence_url": "https://example.test/verified-agent-card",
+          "agent_operated_verified_at": "2026-09-20T12:00:00Z",
+          "address": "agent@example.test",
+          "availability": "available",
+          "provider": "agentmail",
+          "supports_dm": "yes",
+          "supported_interactions": "text/plain,attachments",
+          "source_url": "https://example.test/verified-agent-card",
+          "last_verified_at": "2026-09-20T12:00:00Z",
+          "suppressed": false,
+          "active_suppressions": []
+        }
+      ],
+      "history": [],
+      "draft": {
+        "subject": "A relevant Darwin query",
+        "query": "replace-with-reviewed-query",
+        "body": "replace-with-revised-message-body",
+        "critique": "replace-with-recorded-critique",
+        "reviewer": "agent dm agent",
+        "model_route": "portkey",
+        "revised": true
+      },
+      "expose_resource": true,
+      "history_truncated": false,
+      "suppression_context_complete": true,
+      "active_suppressions": []
+    }
+  ]
+}

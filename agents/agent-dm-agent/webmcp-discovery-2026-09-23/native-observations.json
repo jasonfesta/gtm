@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "source_task": "01a0ce3a-2c94-7bc1-81e3-bcb312237391",
+  "evidence_kind": "bounded transcription of native CUA outputs; full raw outputs retained in source task",
+  "no_messages_sent": true,
+  "no_credentials_accessed": true,
+  "no_private_crm_data": true,
+  "observations": [
+    {
+      "candidate_id": "webmcp-asympta",
+      "tab": 4,
+      "native_tool_count": 13,
+      "native_send": "asympta_send_agent_message",
+      "native_readback": "asympta_list_agent_messages",
+      "native_read_call": {
+        "name": "asympta_describe_capabilities",
+        "input": {}
+      },
+      "read_result_summary": {
+        "ok": true,
+        "api": "document.modelContext",
+        "integration": "imperative WebMCP",
+        "simulation_disclosed": true,
+        "personal_intent_agent": {
+          "id": "agent-user",
+          "name": "Mina"
+        },
+        "workflowStartsRequestedByWebMcpRequireHumanApproval": true
+      },
+      "send_required": [
+        "body"
+      ],
+      "send_optional_thread_fields": [
+        "threadId",
+        "replyToId",
+        "fromId",
+        "toId"
+      ],
+      "read_filter_fields": [
+        "participantId",
+        "threadId",
+        "limit"
+      ]
+    },
+    {
+      "candidate_id": "webmcp-queen",
+      "tab": 5,
+      "native_tool_count": 14,
+      "native_send": "message_queen",
+      "native_readback": null,
+      "page_disclosure": "Fictional Queen; public message text and replies may be visible to spectators",
+      "send_required": [
+        "message"
+      ],
+      "conversation_identifier_input": false,
+      "native_calls": []
+    },
+    {
+      "candidate_id": "webmcp-lobby",
+      "tab": 6,
+      "native_tool_count_at_fetch": 12,
+      "native_send": "ask_concierge",
+      "native_readback": null,
+      "send_required": [
+        "question"
+      ],
+      "return_contract": [
+        "ok",
+        "answer",
+        "conversation_id"
+      ],
+      "native_read_call": {
+        "name": "get_business_info",
+        "input": {}
+      },
+      "read_result_summary": {
+        "ok": true,
+        "name": "Lobby",
+        "booking_available": true,
+        "identity": "own AI concierge; visitor business/product questions"
+      }
+    },
+    {
+      "candidate_id": "webmcp-arenna",
+      "tab": 7,
+      "page_url": "https://arenna.link/en",
+      "native_tool_count": 7,
+      "native_send": "ask_concierge",
+      "native_readback": null,
+      "send_required": [
+        "question"
+      ],
+      "return_contract": [
+        "ok",
+        "answer",
+        "conversation_id"
+      ],
+      "native_read_call": {
+        "name": "get_business_info",
+        "input": {}
+      },
+      "read_result_summary": {
+        "ok": true,
+        "name": "ARENNA",
+        "booking_available": true,
+        "identity": "business concierge; lessons/instructor/service topics"
+      }
+    },
+    {
+      "candidate_id": "webmcp-kinro",
+      "tab": 8,
+      "page_url_without_ephemeral_visitor_id": "https://kinro.com/",
+      "native_tool_count": 1,
+      "native_tools": [
+        "find_insurance_guidance"
+      ],
+      "directory_send_not_observed": "ask_kinro_insurance_question",
+      "native_calls": [],
+      "page_disclosure": "AI supported by licensed insurance agents; exact tool recipient not proven"
+    }
+  ],
+  "recorded_at": "2026-09-23T12:56:46Z",
+  "observation_date": "2026-09-23",
+  "discovery_tabs_closed": true
+}

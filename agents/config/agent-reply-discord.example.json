@@ -1,0 +1,15 @@
+{
+  "channel": "discord",
+  "sender_account": "REPLACE_WITH_VERIFIED_BOT_IDENTITY",
+  "target_reference": "REPLACE_WITH_OBSERVED_TARGET_REFERENCE",
+  "conversation_id": "REPLACE_WITH_PARENT_MESSAGE_ID",
+  "parent_url": "REPLACE_WITH_OBSERVED_MESSAGE_PERMALINK",
+  "response_form": "query",
+  "outbound_text": "REPLACE_WITH_ONE_CONTEXTUAL_REPLY_AFTER_READING_THE_CONVERSATION",
+  "provider": {
+    "guild_id": "REPLACE_WITH_PERMITTED_GUILD_ID",
+    "channel_id": "REPLACE_WITH_PERMITTED_CHANNEL_ID",
+    "message_id": "REPLACE_WITH_PARENT_MESSAGE_ID",
+    "token_env": "DISCORD_BOT_TOKEN"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source_agent": "human reply agent",
+  "run_id": "example-run-id",
+  "events": [
+    {
+      "event": "gtm.message_sent",
+      "uuid": "00000000-0000-4000-8000-000000000001",
+      "timestamp": "2026-09-22T12:00:00Z",
+      "properties": {
+        "distinct_id": "gtm-example-account",
+        "$process_person_profile": false,
+        "$geoip_disable": true,
+        "workspace": "gtm",
+        "source_agent": "human reply agent",
+        "run_id": "example-run-id",
+        "channel": "x",
+        "message_kind": "public_reply",
+        "provider_status": "confirmed"
+      }
+    }
+  ]
+}

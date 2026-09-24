@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "run_id": "REPLACE_WITH_UNIQUE_RUN_ID",
+  "status": "proposed",
+  "source": {
+    "source_id": "REPLACE_WITH_STABLE_SOURCE_ID",
+    "kind": "website|chat_text|file|image|mixed",
+    "reference": "user-supplied URL, file, or conversation reference",
+    "received_at": null,
+    "sha256": null,
+    "visibility": "public|user_provided|authorized_private",
+    "rights_and_access_notes": "",
+    "terms_review": "pending",
+    "robots_review": "pending_or_not_applicable"
+  },
+  "scope": {
+    "audience": "relevant developers, founders, product leaders and team members",
+    "pilot_max_source_entities": null,
+    "pilot_max_people": null,
+    "channels": [
+      "email",
+      "linkedin",
+      "x"
+    ],
+    "cohort_file": "cohort.json",
+    "cohort_frozen_at": null,
+    "eligible_people_count": null,
+    "selection_and_exclusions": "",
+    "full_run_approved": false
+  },
+  "permissions": {
+    "outreach": false,
+    "external_drafts": false,
+    "publishing": false,
+    "scheduling": false,
+    "hosted_crm_creation": false,
+    "apollo_enrichment_approved": false,
+    "max_credits": 0,
+    "max_currency_amount": 0,
+    "currency": null,
+    "approval_reference": null,
+    "personal_email_reveal": false,
+    "phone_reveal": false,
+    "smtp_probe": false
+  },
+  "checkpoint": {
+    "stage": "intake",
+    "pending_entity_ids": [],
+    "completed_attempt_ids": [],
+    "ambiguous_paid_request_ids": [],
+    "next_action": "inspect source and propose bounded pilot",
+    "updated_at": null
+  },
+  "cost_and_time": {
+    "started_at": null,
+    "finished_at": null,
+    "active_review_minutes": null,
+    "reported_credits_consumed": 0,
+    "actual_currency_cost": null,
+    "unknown_charge_requests": 0
+  },
+  "metrics": {
+    "definition": "distinct people in the fixed eligible cohort; candidates and confirmed reported separately",
+    "any_channel": null,
+    "all_three_channels": null,
+    "confirmed_all_three_channels": null,
+    "email_including_inferred": null,
+    "email_excluding_inferred_only": null,
+    "linkedin_including_candidates": null,
+    "x_including_candidates": null,
+    "confirmed_email": null,
+    "confirmed_linkedin": null,
+    "confirmed_x": null,
+    "provider_attempted": null,
+    "provider_matched": null,
+    "provider_returned_emails": null
+  },
+  "notes": "Set explicit bounded cohort limits before research. Example only; no credentials or personal data. No paid or outbound action authorized."
+}

@@ -1,0 +1,27 @@
+{
+  "export_id": "replace-with-bounded-ops-outreach-export-id",
+  "candidates": [
+    {
+      "kind": "cold_intro",
+      "target_audience": "agent",
+      "target_agent_id": "replace-with-crm-agent-id",
+      "sender_account": "replace-with-agentmail-sender-inbox",
+      "agent_route_attestations": [
+        {
+          "contact_id": "replace-with-crm-contact-id",
+          "address": "agent@example.test",
+          "agent_operated": true,
+          "evidence_url": "https://example.test/verified-agent-card",
+          "verified_at": "2026-09-20T12:00:00Z"
+        }
+      ],
+      "source": {
+        "source_id": "replace-with-verified-index-record-id",
+        "source_url": "https://example.test/verified-agent-card",
+        "occurred_at": "2026-09-20T12:00:00Z",
+        "evidence": "replace-with-exact-agent-discovery-evidence"
+      },
+      "expose_resource": false
+    }
+  ]
+}
